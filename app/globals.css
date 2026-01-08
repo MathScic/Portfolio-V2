@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Tailwind v4 custom variant */
+@custom-variant dark (&:is(.dark *));
+
+/* --------------------------------------------------
+   THEME TOKENS (shadcn compatible)
+-------------------------------------------------- */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* --------------------------------------------------
+   LIGHT MODE (default)
+-------------------------------------------------- */
+:root {
+  --radius: 0.625rem;
+
+  /* Brand palette */
+  --background: #f5efe9; /* beige */
+  --foreground: #1f1f1f; /* ink */
+
+  --card: #ffffff;
+  --card-foreground: #1f1f1f;
+
+  --popover: #ffffff;
+  --popover-foreground: #1f1f1f;
+
+  /* Terracotta */
+  --primary: #c96a4a;
+  --primary-foreground: #ffffff;
+
+  /* Neutrals */
+  --secondary: #e8ded4;
+  --secondary-foreground: #1f1f1f;
+
+  --muted: #efe7e0;
+  --muted-foreground: #6b6b6b;
+
+  --accent: #e8ded4;
+  --accent-foreground: #1f1f1f;
+
+  /* System */
+  --border: rgba(31, 31, 31, 0.12);
+  --input: rgba(31, 31, 31, 0.14);
+  --ring: rgba(201, 106, 74, 0.45);
+}
+
+/* --------------------------------------------------
+   DARK MODE
+-------------------------------------------------- */
+.dark {
+  --background: #141414;
+  --foreground: #f5efe9;
+
+  --card: #1c1c1c;
+  --card-foreground: #f5efe9;
+
+  --popover: #1c1c1c;
+  --popover-foreground: #f5efe9;
+
+  --primary: #c96a4a;
+  --primary-foreground: #141414;
+
+  --secondary: #242424;
+  --secondary-foreground: #f5efe9;
+
+  --muted: #242424;
+  --muted-foreground: rgba(245, 239, 233, 0.7);
+
+  --accent: #242424;
+  --accent-foreground: #f5efe9;
+
+  --border: rgba(245, 239, 233, 0.12);
+  --input: rgba(245, 239, 233, 0.14);
+  --ring: rgba(201, 106, 74, 0.55);
+}
+
+/* --------------------------------------------------
+   BASE STYLES
+-------------------------------------------------- */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
