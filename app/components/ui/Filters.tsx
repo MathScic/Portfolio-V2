@@ -14,8 +14,8 @@ export default function Filters({
   filters: Filter[];
 }) {
   return (
-    <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-      <div className="relative flex gap-2 rounded-full border border-border bg-background p-1">
+    <div className="mt-8 flex justify-center">
+      <div className="relative inline-flex gap-2 rounded-full border border-border bg-background p-1">
         {filters.map((f) => {
           const isActive = active === f.id;
 
@@ -26,10 +26,10 @@ export default function Filters({
               onClick={() => onChange(f.id)}
               className={[
                 "relative z-10 rounded-full px-4 py-2 text-sm font-semibold transition",
-                "focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                "focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
                 isActive
                   ? "text-white"
-                  : "text-foreground/80 hover:text-foreground hover:bg-muted/60",
+                  : "text-foreground/80 hover:bg-muted/60 hover:text-foreground",
               ].join(" ")}
               aria-pressed={isActive}
             >

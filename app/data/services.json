@@ -1,0 +1,30 @@
+[
+  {
+    "id": "dev",
+    "icon": "Code2",
+    "title": "Développement Web",
+    "description": "Sites vitrines et applications React/Next.js performantes, scalables et maintenables.",
+    "stack": ["Next.js", "React", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    "id": "design",
+    "icon": "Paintbrush",
+    "title": "UI/UX Design",
+    "description": "Interfaces intuitives et élégantes conçues sur Figma avec design systems cohérents.",
+    "stack": ["Figma", "Design Systems", "Prototypes", "Responsive"]
+  },
+  {
+    "id": "seo",
+    "icon": "Rocket",
+    "title": "SEO & Performance",
+    "description": "Optimisation technique, Core Web Vitals et stratégie de référencement naturel.",
+    "stack": ["SEO technique", "Analytics", "Core Web Vitals", "Monitoring"]
+  },
+  {
+    "id": "maintenance",
+    "icon": "Wrench",
+    "title": "Maintenance & Support",
+    "description": "Accompagnement continu, mises à jour régulières et support technique réactif.",
+    "stack": ["Monitoring", "Évolutions", "Sécurité", "Support"]
+  }
+]

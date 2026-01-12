@@ -1,0 +1,23 @@
+[
+  {
+    "id": "performance",
+    "icon": "Zap",
+    "title": "Performance & rapidité",
+    "description": "Sites ultra-rapides optimisés pour la conversion. Chaque milliseconde compte pour l'expérience utilisateur et le SEO.",
+    "align": "left"
+  },
+  {
+    "id": "collaboration",
+    "icon": "Users",
+    "title": "Collaboration transparente",
+    "description": "Process clair, deadlines respectées et communication fluide tout au long du projet. Vous savez toujours où on en est.",
+    "align": "right"
+  },
+  {
+    "id": "quality",
+    "icon": "Award",
+    "title": "Qualité & pérennité",
+    "description": "Code propre, architecture solide et maintenabilité garantie. Votre site est conçu pour durer et évoluer facilement.",
+    "align": "left"
+  }
+]

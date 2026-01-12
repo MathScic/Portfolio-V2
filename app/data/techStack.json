@@ -1,0 +1,46 @@
+{
+  "Maîtrise avancée": [
+    {
+      "name": "Next.js",
+      "color": "bg-black/5 text-black border-black/20"
+    },
+    {
+      "name": "Tailwind CSS",
+      "color": "bg-[#06B6D4]/10 text-[#0891B2] border-[#06B6D4]/30"
+    },
+    {
+      "name": "Supabase",
+      "color": "bg-[#3ECF8E]/10 text-[#2D9B6B] border-[#3ECF8E]/30"
+    }
+  ],
+  "Compétences solides": [
+    {
+      "name": "React",
+      "color": "bg-[#61DAFB]/10 text-[#149ECA] border-[#61DAFB]/30"
+    },
+    {
+      "name": "TypeScript",
+      "color": "bg-[#3178C6]/10 text-[#3178C6] border-[#3178C6]/30"
+    },
+    {
+      "name": "Node.js",
+      "color": "bg-[#68A063]/10 text-[#68A063] border-[#68A063]/30"
+    },
+    {
+      "name": "Figma",
+      "color": "bg-[#F24E1E]/10 text-[#D43B11] border-[#F24E1E]/30"
+    },
+    {
+      "name": "Git",
+      "color": "bg-[#F05032]/10 text-[#DE4C36] border-[#F05032]/30"
+    },
+    {
+      "name": "Vercel",
+      "color": "bg-black/5 text-black border-black/20"
+    },
+    {
+      "name": "SEO",
+      "color": "bg-primary/10 text-primary border-primary/30"
+    }
+  ]
+}

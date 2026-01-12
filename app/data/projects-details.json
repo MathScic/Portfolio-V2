@@ -1,0 +1,40 @@
+[
+  {
+    "slug": "inkspire-tattoo",
+    "title": "Inkspire Tattoo",
+    "description": "Site vitrine moderne pour un salon de tatouage en Normandie",
+    "tags": ["Next.js", "Tailwind CSS", "SEO", "Responsive"],
+    "image": "/images/projects/inkspire.jpg",
+    "context": "Inkspire Tattoo, salon de tatouage basé en Normandie, avait besoin d'une présence en ligne professionnelle pour attirer de nouveaux clients et présenter le portfolio des artistes.",
+    "solution": "Création d'un site vitrine élégant avec galerie de réalisations, formulaire de prise de rendez-vous et optimisation SEO local pour améliorer la visibilité.",
+    "stack": ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    "features": [
+      "Design dark moderne et épuré",
+      "Galerie de tatouages responsive",
+      "Formulaire de contact intégré",
+      "Optimisation SEO local",
+      "Performance 95+ sur Lighthouse"
+    ],
+    "link": "https://inkspire-tattoo.fr",
+    "year": "2024"
+  },
+  {
+    "slug": "trails-des-vikings",
+    "title": "Trails des Vikings",
+    "description": "Site événementiel complet pour une course trail organisée par le club de foot de Bréhal",
+    "tags": ["Next.js", "Supabase", "SEO", "Stripe"],
+    "image": "/images/projects/trails.jpg",
+    "context": "Le club de foot de Bréhal organise chaque année le Trails des Vikings, un événement sportif majeur nécessitant un site web pour les inscriptions et la communication.",
+    "solution": "Développement d'une plateforme complète avec système d'inscription en ligne, gestion des participants, et interface d'administration pour les organisateurs.",
+    "stack": ["Next.js", "Supabase", "Tailwind CSS", "Stripe"],
+    "features": [
+      "Système d'inscription sécurisé",
+      "Paiement en ligne via Stripe",
+      "Dashboard administrateur",
+      "Génération de dossards PDF",
+      "Tracking temps réel (à venir)"
+    ],
+    "link": "https://trails-des-vikings.fr",
+    "year": "2024"
+  }
+]

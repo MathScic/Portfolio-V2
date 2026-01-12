@@ -10,8 +10,6 @@ import { PROJECTS } from "../../data/project";
 const FILTERS = [
   { id: "all", label: "All" },
   { id: "Next.js", label: "Next.js" },
-  { id: "Vercel", label: "Vercel" },
-  { id: "Supabase", label: "Supabase" },
   { id: "SEO", label: "SEO" },
   { id: "Tailwind", label: "Tailwind" },
   { id: "RLS", label: "RLS" },
@@ -26,14 +24,14 @@ export default function ProjectsPreview() {
   const filtered = active === "all" ? PROJECTS : PROJECTS.filter((p) => p.tags.includes(active));
 
   return (
-    <section className="mx-auto max-w-7xl px-6 pb-24" id="projects">
-      {/* Header + Filters */}
+    <section className="mx-auto max-w-7xl pb-24" id="projects">
+      {/* Header - avec padding */}
       <motion.div
         initial={{ opacity: 0, x: 40 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.35 }}
         transition={TRANSITION}
-        className="flex flex-col gap-8"
+        className="px-6"
       >
         <div className="flex items-end justify-between gap-6">
           <div>
@@ -42,20 +40,14 @@ export default function ProjectsPreview() {
               Projets récents <span className="text-primary">.</span>
             </h2>
           </div>
-
-          <Link
-            href="/projects"
-            className="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-foreground/80 transition hover:text-foreground"
-          >
-            Voir tous <span className="text-primary">→</span>
-          </Link>
         </div>
-
-        <Filters filters={FILTERS} active={active} onChange={setActive} />
       </motion.div>
 
-      {/* Grid */}
-      <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Filters - SANS padding, pleine largeur */}
+      <Filters filters={FILTERS} active={active} onChange={setActive} />
+
+      {/* Grid - avec padding */}
+      <div className="mt-8 grid gap-8 px-6 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((p, idx) => (
           <motion.div
             key={p.id}
@@ -71,20 +63,10 @@ export default function ProjectsPreview() {
 
       {/* Empty state */}
       {filtered.length === 0 ? (
-        <p className="mt-10 text-sm text-muted-foreground">
+        <p className="mt-10 px-6 text-sm text-muted-foreground">
           Aucun projet ne correspond à ce filtre.
         </p>
       ) : null}
-
-      {/* Mobile CTA */}
-      <div className="mt-8 sm:hidden">
-        <Link
-          href="/projects"
-          className="inline-flex w-full items-center justify-center rounded-xl border border-border bg-white/60 px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-white"
-        >
-          Voir tous les projets
-        </Link>
-      </div>
     </section>
   );
 }

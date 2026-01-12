@@ -4,11 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Mail } from "lucide-react";
 
 const links = [
   { href: "/", label: "Accueil" },
-  { href: "#services", label: "Services" },
-  { href: "#about", label: "À propos" },
+  { href: "/services", label: "Services" },
+  { href: "/about", label: "À propos" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -17,7 +18,6 @@ export function MobileHeader() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("/");
 
-  // sync route + hash
   useEffect(() => {
     const sync = () => {
       if (pathname !== "/") return setActive(pathname);
@@ -29,7 +29,6 @@ export function MobileHeader() {
     return () => window.removeEventListener("hashchange", sync);
   }, [pathname]);
 
-  // esc close
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
     if (open) window.addEventListener("keydown", onKey);
@@ -38,17 +37,15 @@ export function MobileHeader() {
 
   return (
     <>
-      {/* Burger button ONLY */}
-      <div className="fixed top-3 right-3 z-50 lg:hidden">
-        {/* 👉 pour le mettre à GAUCHE : remplace right-3 par left-3 */}
+      {/* Burger + Contact - MOBILE ONLY */}
+      <div className="fixed top-3 inset-x-4 z-50 flex items-center justify-between lg:hidden">
+        {/* Burger - GAUCHE */}
         <motion.button
           type="button"
           aria-label="Ouvrir le menu"
           onClick={() => setOpen(true)}
           whileTap={{ scale: 0.92 }}
-          className="flex h-11 w-11 items-center justify-center rounded-full
-                     border border-border bg-white/80 backdrop-blur-md
-                     shadow-sm"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white/80 shadow-sm backdrop-blur-md"
         >
           <span className="text-lg leading-none">☰</span>
         </motion.button>
@@ -72,13 +69,13 @@ export function MobileHeader() {
               onClick={() => setOpen(false)}
             />
 
-            {/* Panel */}
+            {/* Panel - depuis GAUCHE maintenant */}
             <motion.aside
-              initial={{ x: "100%" }}
+              initial={{ x: "-100%" }}
               animate={{ x: 0 }}
-              exit={{ x: "100%" }}
+              exit={{ x: "-100%" }}
               transition={{ type: "spring", stiffness: 420, damping: 36 }}
-              className="absolute right-0 top-0 h-full w-72 bg-white p-4 shadow-xl"
+              className="absolute left-0 top-0 h-full w-72 bg-white p-4 shadow-xl"
             >
               <div className="mb-4 flex items-center justify-between">
                 <span className="text-sm font-semibold">Navigation</span>

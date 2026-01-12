@@ -3,18 +3,20 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { Mail, Menu, X } from "lucide-react";
 
 const links = [
   { href: "/", label: "Accueil" },
-  { href: "#services", label: "Services" },
-  { href: "#about", label: "À propos" },
+  { href: "/services", label: "Services" },
+  { href: "/about", label: "À propos" },
   { href: "#contact", label: "Contact" },
 ];
 
 export default function Header() {
   const pathname = usePathname();
   const [active, setActive] = useState("/");
-  const ulRef = useRef<HTMLUListElement | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const ulRef = useRef<HTMLUListElement>(null);
   const [pill, setPill] = useState({ left: 0, width: 0 });
 
   const measure = () => {
@@ -28,9 +30,8 @@ export default function Header() {
   };
 
   useEffect(() => {
-    if (pathname !== "/") return setActive(pathname);
-    const h = window.location.hash;
-    setActive(h && links.some((l) => l.href === h) ? h : "/");
+    const newActive = pathname !== "/" ? pathname : window.location.hash || "/";
+    setActive(links.some((l) => l.href === newActive) ? newActive : "/");
   }, [pathname]);
 
   useEffect(() => {
@@ -49,38 +50,49 @@ export default function Header() {
   useLayoutEffect(() => measure(), [active]);
 
   return (
-    <header className="sticky top-2 z-50 mx-auto w-fit rounded-full border border-border bg-white/70 shadow-sm backdrop-blur-md">
-      <nav className="px-2 py-2">
-        <ul
-          ref={ulRef}
-          className="relative hidden md:flex items-center gap-1 whitespace-nowrap flex-nowrap"
-        >
-          <span
-            aria-hidden="true"
-            className="absolute top-1/2 -translate-y-1/2 h-8 rounded-full bg-primary/15 transition-all duration-300 ease-out"
-            style={{ left: pill.left, width: pill.width }}
-          />
-          {links.map((l) => {
-            const isActive = active === l.href;
-            return (
-              <li key={l.href} className="relative">
+    <>
+      <header className="sticky top-2 z-50 mx-auto flex items-center justify-between px-4 sm:px-6">
+        {/* Nav Desktop */}
+        <nav className="mx-auto hidden w-fit rounded-full border border-border bg-white/70 px-2 py-2 shadow-sm backdrop-blur-md md:block">
+          <ul ref={ulRef} className="relative flex items-center gap-1">
+            <span
+              className="absolute top-1/2 h-[30px] -translate-y-1/2 rounded-full bg-primary/15 transition-all duration-300"
+              style={{ left: pill.left, width: pill.width }}
+            />
+            {links.map((l) => (
+              <li key={l.href}>
                 <Link
                   href={l.href}
                   data-key={l.href}
                   onClick={() => setActive(l.href)}
-                  className={[
-                    "relative z-10 rounded-full px-3 py-2 text-[13px] transition-colors",
-                    "text-muted-foreground hover:text-foreground",
-                    isActive ? "text-foreground font-semibold" : "",
-                  ].join(" ")}
+                  className={`relative z-10 flex h-[30px] items-center rounded-full px-3 text-[13px] leading-none transition-colors ${
+                    active === l.href
+                      ? "font-semibold text-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
                 >
                   {l.label}
                 </Link>
               </li>
-            );
-          })}
-        </ul>
-      </nav>
-    </header>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Bouton Contact Desktop */}
+        <Link
+          href="/contact"
+          className="hidden items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90 md:inline-flex"
+        >
+          <Mail className="h-4 w-4" />
+          Me contacter
+        </Link>
+
+        {/* Mail */}
+
+        <Link href="/contact" className="ml-auto rounded-full bg-primary p-2.5 shadow-sm md:hidden">
+          <Mail className="h-5 w-5 text-primary-foreground" />
+        </Link>
+      </header>
+    </>
   );
 }
