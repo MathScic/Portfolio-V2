@@ -80,7 +80,7 @@ export default function Header() {
 
         {/* Bouton Contact Desktop */}
         <Link
-          href="/contact"
+          href="#contact"
           className="hidden items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90 md:inline-flex"
         >
           <Mail className="h-4 w-4" />
