@@ -1,19 +1,9 @@
-import type { Metadata } from "next";
+"use client";
 import Services from "../components/services/Services";
 import Reasons from "../components/services/Reasons";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-
-export const metadata: Metadata = {
-  title: "Services",
-  description:
-    "Développement web, UI/UX Design, SEO & Performance, Maintenance. Création de sites performants avec Next.js et React en Normandie.",
-  openGraph: {
-    title: "Services | Mathieu Scicluna",
-    description: "Développement web moderne et performant en Normandie",
-  },
-};
 
 export default function ServicesPage() {
   return (

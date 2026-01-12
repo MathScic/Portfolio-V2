@@ -5,7 +5,7 @@ import { MobileHeader } from "./components/MobileHeader";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mathieu-scicluna.fr"), // ← Remplacez par votre domaine
+  metadataBase: new URL("https://mathieu-scicluna.fr"),
   title: {
     default: "Mathieu Scicluna | Développeur Web Full-Stack Normandie",
     template: "%s | Mathieu Scicluna",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       "Développeur Web Full-Stack en Normandie. Création de sites performants et optimisés.",
     images: [
       {
-        url: "/og-image.jpg", // Image 1200x630px à créer
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Mathieu Scicluna - Développeur Web",
