@@ -16,7 +16,7 @@ export default function AboutBio() {
       <div className="mx-auto">
         <div className="relative h-48 w-48 overflow-hidden rounded-3xl border-2 border-primary/20 lg:h-64 lg:w-64">
           <Image
-            src="/images/profile.jpg"
+            src="/images/Profile.jpg"
             alt="Mathieu Scicluna"
             width={256}
             height={256}
