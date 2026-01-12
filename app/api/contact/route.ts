@@ -20,10 +20,10 @@ export async function POST(request: Request) {
     }
 
     // Envoi de l'email
-    const data = await resend.emails.send({
-      from: `${name} <onboarding@resend.dev>`, // Nom de la personne qui contacte
-      to: ["scicluna.mathieu@hotmail.fr"], // ⚠️ REMPLACEZ par votre vrai email
-      replyTo: email, // Email de la personne qui contacte
+    const { data, error } = await resend.emails.send({
+      from: `${name} <onboarding@resend.dev>`,
+      to: ["scicluna.mathieu@hotmail.fr"], // Votre email
+      replyTo: email,
       subject: `Nouveau message de ${name}`,
       html: `
         <h2>Nouveau message de :</h2>
@@ -34,7 +34,12 @@ export async function POST(request: Request) {
       `,
     });
 
-    return NextResponse.json({ message: "Email envoyé avec succès", id: data.id }, { status: 200 });
+    if (error) {
+      console.error("Erreur Resend:", error);
+      return NextResponse.json({ error: "Erreur lors de l'envoi de l'email" }, { status: 500 });
+    }
+
+    return NextResponse.json({ message: "Email envoyé avec succès" }, { status: 200 });
   } catch (error) {
     console.error("Erreur envoi email:", error);
     return NextResponse.json({ error: "Erreur lors de l'envoi de l'email" }, { status: 500 });
