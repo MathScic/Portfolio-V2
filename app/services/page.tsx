@@ -41,7 +41,7 @@ export default function ServicesPage() {
           Discutons de vos besoins et trouvons la solution idéale ensemble.
         </p>
         <Link
-          href="/contact"
+          href="#contact"
           className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
         >
           Me contacter
