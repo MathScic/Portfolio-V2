@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
     description:
       "Site d'achat et revente de véhicules dans le Loiret (45) pour un client.",
     tags: ["Next.js", "Supabase", "SEO", "Sanity"],
-    image: "/images/projects/trails.jpg",
+    image: "/images/forefvercars.png",
     externalUrl: "https://www.forevercars.fr",
   },
 ];
