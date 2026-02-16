@@ -36,10 +36,9 @@ export const PROJECTS: Project[] = [
   {
     id: "forevercars",
     title: "ForeverCars",
-    description:
-      "Site d'achat et revente de véhicules dans le Loiret (45) pour un client.",
+    description: "Site d'achat et revente de véhicules dans le Loiret (45) pour un client.",
     tags: ["Next.js", "Supabase", "SEO", "Sanity"],
-    image: "/images/forefvercars.png",
+    image: "/images/forevercars.png",
     externalUrl: "https://www.forevercars.fr",
   },
 ];
