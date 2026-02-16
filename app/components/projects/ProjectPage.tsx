@@ -13,6 +13,7 @@ const FILTERS = [
   { id: "SEO", label: "SEO" },
   { id: "Tailwind", label: "Tailwind" },
   { id: "RLS", label: "RLS" },
+  { id: "Sanity", label: "Sanity" },
 ];
 
 export default function ProjectsPage() {

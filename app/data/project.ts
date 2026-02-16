@@ -33,4 +33,13 @@ export const PROJECTS: Project[] = [
     image: "/images/Inkspire-tatoo.png",
     externalUrl: "https://inkspire-drab.vercel.app",
   },
+  {
+    id: "forevercars",
+    title: "ForeverCars",
+    description:
+      "Site d'achat et revente de véhicules dans le Loiret (45) pour un client.",
+    tags: ["Next.js", "Supabase", "SEO", "Sanity"],
+    image: "/images/projects/trails.jpg",
+    externalUrl: "https://www.forevercars.fr",
+  },
 ];
