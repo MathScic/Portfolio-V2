@@ -35,6 +35,20 @@
       "Tracking temps réel (à venir)"
     ],
     "link": "https://trails-des-vikings.fr",
-    "year": "2024"
+    "year": "2025"
+  },
+
+  {
+    "slug": "ForeverCars",
+    "title": "ForeverCars",
+    "description": "Site d'achat de revente de véhicule dasn le loiret 45 pour un client",
+    "tags": ["Next.js", "Supabase", "SEO"],
+    "image": "/images/projects/trails.jpg",
+    "context": "Le client ma demande un site permettant de stocker les voitures sur son site et de montrer ainsi les véhicule qu'il met en ventes. ",
+    "solution": "Développement d'une plateforme ravec mise ne place de Sanity afin que le client puisse ajouter lui meme les véhicules. ",
+    "stack": ["Next.js", "Supabase", "Tailwind CSS", "Sanity"],
+    "features": ["Système d'ajout de véhicule", "Dashboard administrateur"],
+    "link": "https://www.forevercars.fr",
+    "year": "2026"
   }
 ]
