@@ -59,10 +59,11 @@ export default function Hero() {
 
             <a
               href="/images/CV – Mathieu Scicluna · Développeur Fullstack.pdf"
-              download
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center justify-center rounded-full border border-black/15 bg-white/60 px-6 py-3 text-sm font-semibold text-foreground/80 transition hover:bg-white"
             >
-              Télécharger mon CV
+              Voir mon CV
             </a>
 
             <Link
