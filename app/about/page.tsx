@@ -8,10 +8,12 @@ import AboutCTA from "../components/about/AboutCTA";
 export const metadata: Metadata = {
   title: "À propos",
   description:
-    "Développeur Web Full-Stack diplômé en 2024. Basé en Normandie, spécialisé en React/Next.js. Projets : Inkspire Tattoo, Trails des Vikings.",
+    "Mathieu Scicluna, développeur Fullstack Next.js basé en Normandie. Disponible en freelance pour vos projets web.",
   openGraph: {
     title: "À propos | Mathieu Scicluna",
-    description: "Développeur passionné par les détails. Bac+2 Développeur Intégrateur Web.",
+    description:
+      "Développeur Fullstack Next.js en Normandie, disponible en freelance. Découvrez mon parcours et mes compétences.",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
 

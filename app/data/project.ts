@@ -5,6 +5,7 @@ export type Project = {
   tags: string[];
   image: string;
   externalUrl?: string;
+  type: "client" | "perso";
 };
 
 export const PROJECTS: Project[] = [
@@ -15,6 +16,7 @@ export const PROJECTS: Project[] = [
     tags: ["Next.js", "Supabase", "RLS"],
     image: "/images/Task.png",
     externalUrl: "https://taskpilot-secure.vercel.app/",
+    type: "perso",
   },
   {
     id: "trails-des-vikings",
@@ -23,6 +25,7 @@ export const PROJECTS: Project[] = [
     tags: ["Next.js", "SEO", "Vercel"],
     image: "/images/Trails.png",
     externalUrl: "https://www.trail-des-vikings.fr",
+    type: "client",
   },
   {
     id: "inkspire-tatoo",
@@ -32,6 +35,7 @@ export const PROJECTS: Project[] = [
     tags: ["Next.js", "Vercel", "Tailwind"],
     image: "/images/Inkspire-tatoo.png",
     externalUrl: "https://inkspire-drab.vercel.app",
+    type: "perso",
   },
   {
     id: "forevercars",
@@ -40,5 +44,6 @@ export const PROJECTS: Project[] = [
     tags: ["Next.js", "Supabase", "SEO", "Sanity"],
     image: "/images/forevercars.png",
     externalUrl: "https://www.forevercars.fr",
+    type: "client",
   },
 ];

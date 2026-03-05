@@ -57,6 +57,14 @@ export default function Hero() {
               Me contacter
             </Link>
 
+            <a
+              href="/cv-mathieu-scicluna.pdf"
+              download
+              className="inline-flex items-center justify-center rounded-full border border-black/15 bg-white/60 px-6 py-3 text-sm font-semibold text-foreground/80 transition hover:bg-white"
+            >
+              Télécharger mon CV
+            </a>
+
             <Link
               href="#projects"
               className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white/60 px-6 py-3 text-sm font-semibold text-foreground/80 transition hover:bg-white"

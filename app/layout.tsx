@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL("https://mathieu-scicluna.fr"),
   title: {
-    default: "Mathieu Scicluna | Développeur Web Full-Stack Normandie",
+    default: "Mathieu Scicluna | Développeur Fullstack Next.js – Normandie",
     template: "%s | Mathieu Scicluna",
   },
   description:
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://mathieu-scicluna.fr",
     siteName: "Mathieu Scicluna - Portfolio",
-    title: "Mathieu Scicluna | Développeur Web Full-Stack",
+    title: "Mathieu Scicluna | Développeur Fullstack Next.js – Normandie",
     description:
-      "Développeur Web Full-Stack en Normandie. Création de sites performants et optimisés.",
+      "Développeur Fullstack Next.js en Normandie, disponible en freelance. Sites performants, SEO et interfaces soignées.",
     images: [
       {
         url: "/og-image.jpg",

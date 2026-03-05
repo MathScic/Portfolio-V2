@@ -6,7 +6,7 @@ type Props = {
 };
 
 export default function ProjectCard({ project }: Props) {
-  const { title, description, tags, image, externalUrl } = project;
+  const { title, description, tags, image, externalUrl, type } = project;
 
   return (
     <article
@@ -31,6 +31,17 @@ export default function ProjectCard({ project }: Props) {
           className="object-cover transition duration-300 group-hover:scale-[1.03]"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-black/0 to-black/0" />
+
+        {/* Badge type */}
+        <span
+          className={`absolute right-3 top-3 rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${
+            type === "client"
+              ? "bg-primary text-primary-foreground"
+              : "bg-white/80 text-foreground/70"
+          }`}
+        >
+          {type === "client" ? "Client" : "Perso"}
+        </span>
       </div>
 
       {/* Content (aligné) */}

@@ -8,7 +8,7 @@ const services = [
     icon: Code2,
     title: "Développement Web",
     description:
-      "Applications React/Next.js performantes avec TypeScript. Code propre, testé et maintenable.",
+      "Applications React/Next.js performantes avec TypeScript. Code propre, modulaire et maintenable.",
   },
   {
     icon: Paintbrush,
