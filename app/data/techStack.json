@@ -2,7 +2,7 @@
   "Maîtrise avancée": [
     {
       "name": "Next.js",
-      "color": "bg-black/5 text-black border-black/20"
+      "color": "bg-black/5 text-black border-black/20 dark:bg-white/10 dark:text-foreground dark:border-white/20"
     },
     {
       "name": "Tailwind CSS",
@@ -36,7 +36,7 @@
     },
     {
       "name": "Vercel",
-      "color": "bg-black/5 text-black border-black/20"
+      "color": "bg-black/5 text-black border-black/20 dark:bg-white/10 dark:text-foreground dark:border-white/20"
     },
     {
       "name": "SEO",

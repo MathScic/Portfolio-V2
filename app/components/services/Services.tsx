@@ -23,7 +23,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
-            className="group flex h-full flex-col rounded-2xl border border-black/10 bg-white p-6 transition hover:border-black/20 hover:shadow-sm"
+            className="group flex h-full flex-col rounded-2xl border border-black/10 bg-white p-6 transition hover:border-black/20 hover:shadow-sm dark:border-white/10 dark:bg-card dark:hover:border-white/20"
           >
             {/* Icon */}
             <div className="mb-4 inline-flex w-fit rounded-xl bg-primary/10 p-3 transition group-hover:bg-primary/20">
