@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
     githubUrl: "https://github.com/MathScic/Trail-Brehal",
     type: "client",
     badgeLabel: "Client — Trail running",
-    contextLine: "Événement trail en Normandie — inscription et présentation du parcours",
+    contextLine: "Site vitrine événementiel — Trail en Normandie, inscription et présentation du parcours",
   },
   {
     id: "inkspire-tatoo",
@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
     githubUrl: "https://github.com/MathScic/Inkspire",
     type: "perso",
     badgeLabel: "Projet perso — Tatouage",
-    contextLine: "Application de découverte de tatouages — projet personnel",
+    contextLine: "Site vitrine studio de tatouage — projet personnel",
   },
   {
     id: "forevercars",
