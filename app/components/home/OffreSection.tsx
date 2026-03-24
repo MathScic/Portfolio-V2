@@ -9,7 +9,7 @@ const offres = [
     title: "Site vitrine clé en main",
     price: "À partir de 800 €",
     subtitle: "Devis gratuit — sans engagement",
-    description: "Pour les artisans et commerces qui n'ont pas encore de site ou qui ont juste une page Facebook.",
+    description: "Idéal pour les professionnels souhaitant établir leur présence en ligne avec un site moderne, visible et efficace.",
     inclus: [
       "Design sur mesure adapté à votre activité",
       "5 pages (Accueil, Services, Réalisations, À propos, Contact)",
@@ -29,7 +29,7 @@ const offres = [
     title: "Refonte de site existant",
     price: "À partir de 600 €",
     subtitle: "Devis gratuit — sans engagement",
-    description: "Votre site est vieux, lent, pas mobile-friendly ou ne remonte pas sur Google. On repart sur des bases saines.",
+    description: "Pour les sites vieillissants ou sous-performants : refonte complète du design, de la structure et du référencement.",
     inclus: [
       "Reprise de votre contenu existant",
       "Nouveau design moderne et mobile-first",
@@ -45,7 +45,7 @@ const offres = [
     title: "Application web sur mesure",
     price: "À partir de 1 500 €",
     subtitle: "Devis gratuit — sans engagement",
-    description: "Vous avez un besoin spécifique : réservation en ligne, catalogue produits, espace client, gestion de stock...",
+    description: "Développement d'une solution web adaptée à vos processus métier : réservations, catalogue produits, espace client.",
     inclus: [
       "Analyse de votre besoin métier",
       "Développement sur mesure (Next.js)",
@@ -63,7 +63,7 @@ const offres = [
     title: "Maintenance & évolutions",
     price: "À partir de 50 €/mois",
     subtitle: "Sans engagement — résiliable à tout moment",
-    description: "Votre site est en ligne, vous voulez qu'il reste à jour, sécurisé et que vous puissiez faire évoluer le contenu.",
+    description: "Garantissez la pérennité de votre site avec un suivi technique régulier, des mises à jour et un support disponible.",
     inclus: [
       "Mises à jour techniques régulières",
       "Modifications de contenu (textes, photos, prix)",
@@ -158,10 +158,10 @@ export default function OffreSection() {
 
             <Link
               href="#contact"
-              className={`mt-5 inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition ${
+              className={`mt-5 inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
                 offre.highlight
-                  ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                  : "border border-black/15 bg-white/60 text-foreground/80 hover:bg-white"
+                  ? "bg-primary text-primary-foreground hover:scale-[1.02] hover:bg-primary/80 hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)]"
+                  : "border border-primary/30 bg-white/60 text-primary hover:border-primary hover:bg-primary hover:text-primary-foreground hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)]"
               }`}
             >
               Demander un devis
