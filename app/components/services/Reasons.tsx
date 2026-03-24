@@ -40,7 +40,7 @@ export default function Reasons() {
               transition={{ duration: 0.7 }}
               className={`${
                 reason.align === "left" ? "mr-auto" : "ml-auto"
-              } w-full max-w-3xl rounded-2xl border border-black/10 bg-white p-8 transition hover:border-black/20 hover:shadow-sm`}
+              } w-full max-w-3xl rounded-2xl border border-black/10 bg-white p-8 transition hover:border-black/20 hover:shadow-sm dark:border-white/10 dark:bg-card dark:hover:border-white/20`}
             >
               <div className="flex items-start gap-6">
                 {/* Icon */}
