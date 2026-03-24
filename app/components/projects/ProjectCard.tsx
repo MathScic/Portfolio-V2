@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Github } from "lucide-react";
 import type { Project } from "../../data/project";
 
 type Props = {
@@ -6,7 +7,7 @@ type Props = {
 };
 
 export default function ProjectCard({ project }: Props) {
-  const { title, description, tags, image, externalUrl, type } = project;
+  const { title, tags, image, externalUrl, githubUrl, type, badgeLabel, contextLine } = project;
 
   return (
     <article
@@ -32,7 +33,7 @@ export default function ProjectCard({ project }: Props) {
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-black/0 to-black/0" />
 
-        {/* Badge type */}
+        {/* Badge */}
         <span
           className={`absolute right-3 top-3 rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${
             type === "client"
@@ -40,19 +41,19 @@ export default function ProjectCard({ project }: Props) {
               : "bg-white/80 text-foreground/70"
           }`}
         >
-          {type === "client" ? "Client" : "Perso"}
+          {badgeLabel}
         </span>
       </div>
 
-      {/* Content (aligné) */}
+      {/* Content */}
       <div className="flex flex-1 flex-col p-5">
         {/* Titre */}
         <h3 className="text-base font-semibold text-brand-ink">{title}</h3>
 
-        {/* Description (moins d’espace) */}
-        <p className="mt-1 line-clamp-2 text-sm leading-snug text-brand-ink/70">{description}</p>
+        {/* Ligne contexte */}
+        <p className="mt-1 line-clamp-2 text-sm leading-snug text-brand-ink/70">{contextLine}</p>
 
-        {/* Tags (zone plus compacte) */}
+        {/* Tags */}
         <div className="mt-3 min-h-[28px]">
           {tags?.length > 0 && (
             <ul className="flex flex-wrap gap-2">
@@ -68,22 +69,33 @@ export default function ProjectCard({ project }: Props) {
           )}
         </div>
 
-        {/* Bouton (plus proche du contenu) */}
-        {externalUrl && (
-          <div className="mt-auto pt-4">
+        {/* Boutons */}
+        <div className="mt-auto flex flex-wrap gap-2 pt-4">
+          {externalUrl && (
             <a
               href={externalUrl}
               target="_blank"
               rel="noreferrer"
-              className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
             >
-              Voir le projet →
+              Voir le site →
             </a>
-          </div>
-        )}
+          )}
+          {githubUrl && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full border border-black/10 bg-white/60 px-4 py-2 text-sm font-medium text-foreground/70 transition hover:bg-white hover:text-foreground"
+            >
+              <Github className="h-4 w-4" />
+              Voir le code
+            </a>
+          )}
+        </div>
       </div>
 
-      {/* Hover ring terracotta */}
+      {/* Hover ring */}
       <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-transparent transition group-hover:ring-brand-terracotta/30" />
     </article>
   );

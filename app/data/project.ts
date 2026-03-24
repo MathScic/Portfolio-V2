@@ -5,7 +5,10 @@ export type Project = {
   tags: string[];
   image: string;
   externalUrl?: string;
+  githubUrl?: string;
   type: "client" | "perso";
+  badgeLabel: string;
+  contextLine: string;
 };
 
 export const PROJECTS: Project[] = [
@@ -17,6 +20,8 @@ export const PROJECTS: Project[] = [
     image: "/images/Task.png",
     externalUrl: "https://taskpilot-secure.vercel.app/",
     type: "perso",
+    badgeLabel: "Projet perso — Gestion de tâches",
+    contextLine: "Gestionnaire de tâches — projet personnel",
   },
   {
     id: "trails-des-vikings",
@@ -25,7 +30,10 @@ export const PROJECTS: Project[] = [
     tags: ["Next.js", "SEO", "Vercel"],
     image: "/images/Trails.png",
     externalUrl: "https://www.trail-des-vikings.fr",
+    githubUrl: "https://github.com/MathScic/Trail-Brehal",
     type: "client",
+    badgeLabel: "Client — Trail running",
+    contextLine: "Événement trail en Normandie — inscription et présentation du parcours",
   },
   {
     id: "inkspire-tatoo",
@@ -35,7 +43,10 @@ export const PROJECTS: Project[] = [
     tags: ["Next.js", "Vercel", "Tailwind"],
     image: "/images/Inkspire-tatoo.png",
     externalUrl: "https://inkspire-drab.vercel.app",
+    githubUrl: "https://github.com/MathScic/Inkspire",
     type: "perso",
+    badgeLabel: "Projet perso — Tatouage",
+    contextLine: "Application de découverte de tatouages — projet personnel",
   },
   {
     id: "forevercars",
@@ -44,6 +55,9 @@ export const PROJECTS: Project[] = [
     tags: ["Next.js", "Supabase", "SEO", "Sanity"],
     image: "/images/forevercars.png",
     externalUrl: "https://www.forevercars.fr",
+    githubUrl: "https://github.com/MathScic/ForeverCars-V2",
     type: "client",
+    badgeLabel: "Client — Auto",
+    contextLine: "Concessionnaire auto — vitrine de véhicules avec stock en temps réel",
   },
 ];

@@ -29,22 +29,38 @@ export default function AboutBio() {
       {/* Bio Text */}
       <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
         <p>
-          Basé en <strong className="text-foreground">Normandie</strong>, j'accompagne entreprises,
-          artisans et porteurs de projets dans la création de leur présence digitale. Mon approche
-          combine <strong className="text-foreground">rigueur technique</strong>, sens du design et
-          orientation produit.
+          Je m&apos;appelle <strong className="text-foreground">Mathieu</strong>, développeur web basé à{" "}
+          <strong className="text-foreground">Granville, dans la Manche</strong>.
         </p>
         <p>
-          Diplômé en 2024 d'un{" "}
-          <strong className="text-foreground">Bac+2 Développeur Intégrateur Web</strong>, je me
-          spécialise dans l'écosystème <strong className="text-foreground">React/Next.js</strong>{" "}
-          pour créer des sites performants, accessibles et optimisés SEO.
+          Après 8 ans dans le commerce, j&apos;ai choisi de me consacrer à ce que j&apos;aime vraiment :
+          créer des sites qui servent à quelque chose.
         </p>
         <p>
-          J'accorde une attention particulière à la{" "}
-          <strong className="text-foreground">qualité du code</strong>, la maintenabilité des
-          projets et l'expérience utilisateur finale. Chaque détail compte pour créer des produits
-          web qui font la différence.
+          J&apos;accompagne les <strong className="text-foreground">artisans, commerçants et producteurs locaux</strong>{" "}
+          qui veulent être trouvés sur Google et donner une image pro de leur activité — sans se
+          prendre la tête avec la technique.
+        </p>
+        <p>
+          Déjà présent sur le terrain avec{" "}
+          <a
+            href="https://www.trail-des-vikings.fr"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-primary underline-offset-2 hover:underline"
+          >
+            trail-des-vikings.fr
+          </a>{" "}
+          et{" "}
+          <a
+            href="https://www.forevercars.fr"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-primary underline-offset-2 hover:underline"
+          >
+            forevercars.fr
+          </a>
+          , je connais les besoins des entreprises normandes.
         </p>
       </div>
     </motion.div>

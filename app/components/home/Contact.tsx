@@ -4,8 +4,22 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Loader2, CheckCircle2, Mail, Linkedin } from "lucide-react";
 
+const businessTypes = [
+  "Artisan / BTP",
+  "Commerce / Restaurant",
+  "Producteur / Agriculture",
+  "Santé / Bien-être",
+  "Club sportif / Association",
+  "Autre",
+];
+
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    businessType: "",
+    message: "",
+  });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -25,7 +39,7 @@ export default function Contact() {
       if (!res.ok) throw new Error(data.error || "Erreur lors de l'envoi");
 
       setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", businessType: "", message: "" });
       setTimeout(() => setStatus("idle"), 5000);
     } catch (error) {
       setStatus("error");
@@ -51,7 +65,7 @@ export default function Contact() {
             Travaillons <span className="text-primary">ensemble</span>
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
-            Un projet en tête ? Une question ? N'hésitez pas à me contacter.
+            Un projet en tête ? Décrivez-moi votre activité, je vous réponds sous 24h.
           </p>
         </motion.div>
 
@@ -98,6 +112,27 @@ export default function Contact() {
           </div>
 
           <div>
+            <label htmlFor="businessType" className="block text-sm font-medium text-foreground/80">
+              Vous êtes :
+            </label>
+            <select
+              id="businessType"
+              name="businessType"
+              value={formData.businessType}
+              onChange={(e) => setFormData((p) => ({ ...p, businessType: e.target.value }))}
+              disabled={status === "loading"}
+              className={inputClass}
+            >
+              <option value="">Sélectionnez votre activité</option>
+              {businessTypes.map((type) => (
+                <option key={type} value={type}>
+                  {type}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
             <label htmlFor="message" className="block text-sm font-medium text-foreground/80">
               Message
             </label>
@@ -110,7 +145,7 @@ export default function Contact() {
               disabled={status === "loading"}
               rows={5}
               className={`${inputClass} resize-none`}
-              placeholder="Décrivez votre projet..."
+              placeholder={"Décrivez votre activité en quelques mots.\nAvez-vous déjà un site ? Une date de lancement en tête ?"}
             />
           </div>
 
@@ -118,14 +153,14 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "loading" || status === "success"}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto sm:min-w-[200px]"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto sm:min-w-[220px]"
             >
               {status === "loading" && <Loader2 className="h-4 w-4 animate-spin" />}
               {status === "success" && <CheckCircle2 className="h-4 w-4" />}
               {(status === "idle" || status === "error") && <Send className="h-4 w-4" />}
               {status === "loading" && "Envoi..."}
               {status === "success" && "Envoyé !"}
-              {(status === "idle" || status === "error") && "Envoyer"}
+              {(status === "idle" || status === "error") && "Demander un devis gratuit"}
             </button>
           </div>
 

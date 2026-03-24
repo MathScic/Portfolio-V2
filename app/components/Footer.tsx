@@ -35,8 +35,11 @@ export default function Footer() {
           <div className="space-y-3">
             <h2 className="text-base font-semibold text-foreground">Mathieu Scicluna</h2>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Développeur Full-Stack spécialisé dans la création d'interfaces modernes, performantes
-              et centrées sur l'expérience utilisateur.
+              Développeur web freelance
+              <br />
+              Granville, Manche (50) — Normandie
+              <br />
+              Disponible dans un rayon de 50 km
             </p>
           </div>
 
@@ -54,7 +57,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact - Icônes uniquement */}
+          {/* Contact */}
           <div className="space-y-4 text-left md:text-right">
             <h2 className="text-base font-semibold text-foreground">Contact</h2>
             <div className="flex gap-4 md:justify-end">
@@ -76,7 +79,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-12 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Mathieu Scicluna — Tous droits réservés
+          © 2026 Mathieu Scicluna — Fait avec Next.js &amp; Tailwind CSS
         </div>
       </div>
     </footer>

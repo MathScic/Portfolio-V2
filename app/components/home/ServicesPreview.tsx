@@ -1,25 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Paintbrush, Rocket } from "lucide-react";
+import { Globe, Zap, Code2, MapPin } from "lucide-react";
 
 const services = [
   {
+    icon: Globe,
+    title: "Site vitrine clé en main",
+    description:
+      "5 pages pro, adapté mobile, optimisé Google. Vous fournissez vos infos, je m'occupe du reste.",
+  },
+  {
+    icon: Zap,
+    title: "Livraison rapide",
+    description:
+      "Votre site en ligne en 2 à 3 semaines. Pas de délais interminables, pas de mauvaises surprises.",
+  },
+  {
     icon: Code2,
-    title: "Développement Web",
+    title: "Code propre et maintenable",
     description:
-      "Applications React/Next.js performantes avec TypeScript. Code propre, modulaire et maintenable.",
+      "Construit avec les technologies actuelles. Facile à faire évoluer si vos besoins changent.",
   },
   {
-    icon: Paintbrush,
-    title: "UI/UX Design",
-    description: "Interfaces intuitives et élégantes. Design systems cohérents et accessibles.",
-  },
-  {
-    icon: Rocket,
-    title: "SEO & Performance",
+    icon: MapPin,
+    title: "Accompagnement local",
     description:
-      "Optimisation Core Web Vitals, référencement technique et temps de chargement rapides.",
+      "Basé dans la Manche. Disponible pour un RDV sur place dans un rayon de 50 km autour de Granville.",
   },
 ];
 
@@ -40,8 +47,8 @@ export default function ServicesPreview() {
         </h2>
       </motion.div>
 
-      {/* Grid - 90% width MOBILE uniquement */}
-      <div className="mx-auto mt-16 w-[90%] space-y-6 sm:w-full sm:grid sm:grid-cols-2 sm:gap-8 sm:space-y-0 lg:grid-cols-3">
+      {/* Grid */}
+      <div className="mx-auto mt-16 w-[90%] space-y-6 sm:w-full sm:grid sm:grid-cols-2 sm:gap-8 sm:space-y-0 lg:grid-cols-4">
         {services.map((service, index) => (
           <motion.div
             key={service.title}
@@ -52,12 +59,9 @@ export default function ServicesPreview() {
             whileHover={{ y: -4 }}
             className="group relative overflow-hidden rounded-2xl border border-black/10 bg-white/60 p-8 backdrop-blur-sm transition-all hover:border-black/20 hover:bg-white/80"
           >
-            {/* Icône */}
             <div className="mb-4 inline-flex rounded-full bg-primary/10 p-3 transition-colors group-hover:bg-primary/20">
               <service.icon className="h-6 w-6 text-primary" strokeWidth={2} />
             </div>
-
-            {/* Contenu */}
             <h3 className="text-xl font-semibold text-foreground">{service.title}</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               {service.description}
