@@ -4,12 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
+import { useT } from "../../context/LanguageContext";
 
 export default function Hero() {
+  const { t } = useT();
+  const h = t.hero;
+
   return (
     <section className="mx-auto min-h-screen max-w-7xl px-4 pt-4 pb-16 sm:px-6 lg:pt-24">
       <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
-        {/* Texte */}
         <motion.div
           className="text-center lg:text-left"
           initial={{ opacity: 0, y: 20 }}
@@ -22,7 +25,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            Développeur Web Freelance – Normandie
+            {h.label}
           </motion.p>
 
           <motion.h1
@@ -31,19 +34,18 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            Je crée des sites pros pour les{" "}
-            <span className="text-primary">artisans et commerces</span> de Normandie
+            {h.titlePart1}{" "}
+            <span className="text-primary">{h.titleAccent}</span>{" "}
+            {h.titlePart2}
           </motion.h1>
 
           <motion.p
-            className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-base lg:mx-0"
+            className="mx-auto mt-6 max-w-xl whitespace-pre-line text-lg leading-relaxed text-muted-foreground sm:text-base lg:mx-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            Site vitrine clé en main, livré en 2 à 3 semaines.
-            <br />
-            Visible sur Google, adapté mobile, sans prise de tête.
+            {h.subtitle}
           </motion.p>
 
           <motion.div
@@ -56,28 +58,27 @@ export default function Hero() {
               href="#projects"
               className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
             >
-              Voir mes réalisations
+              {h.cta1}
             </Link>
 
             <Link
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full border border-black/15 bg-white/60 px-6 py-3 text-sm font-semibold text-foreground/80 transition hover:bg-white"
+              className="inline-flex items-center justify-center rounded-full border border-black/15 bg-white/60 px-6 py-3 text-sm font-semibold text-foreground/80 transition hover:bg-white dark:border-white/15 dark:bg-white/[0.06] dark:hover:bg-white/10"
             >
-              Me contacter
+              {h.cta2}
             </Link>
 
             <a
               href="/images/CV – Mathieu Scicluna · Développeur Fullstack.pdf"
               download
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-black/10 bg-transparent px-5 py-3 text-sm font-medium text-foreground/50 transition hover:text-foreground/80"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-black/10 bg-transparent px-5 py-3 text-sm font-medium text-foreground/50 transition hover:text-foreground/80 dark:border-white/10"
             >
               <Download className="h-4 w-4" />
-              Télécharger mon CV
+              {h.cta3}
             </a>
           </motion.div>
         </motion.div>
 
-        {/* Image */}
         <motion.div
           className="relative mx-auto w-[90%] sm:w-full sm:max-w-[520px] lg:max-w-[600px]"
           initial={{ opacity: 0, scale: 0.95 }}

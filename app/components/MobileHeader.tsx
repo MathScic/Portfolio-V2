@@ -4,17 +4,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Mail } from "lucide-react";
-
-const links = [
-  { href: "/", label: "Accueil" },
-  { href: "/services", label: "Services" },
-  { href: "/about", label: "À propos" },
-  { href: "#contact", label: "Contact" },
-];
+import ThemeToggle from "./ui/ThemeToggle";
+import LanguageToggle from "./ui/LanguageToggle";
+import { useT } from "../context/LanguageContext";
 
 export function MobileHeader() {
   const pathname = usePathname();
+  const { t } = useT();
+  const links = t.nav.links;
+
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("/");
 
@@ -27,7 +25,7 @@ export function MobileHeader() {
     sync();
     window.addEventListener("hashchange", sync);
     return () => window.removeEventListener("hashchange", sync);
-  }, [pathname]);
+  }, [pathname, links]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
@@ -37,21 +35,18 @@ export function MobileHeader() {
 
   return (
     <>
-      {/* Burger + Contact - MOBILE ONLY */}
-      <div className="fixed top-3 inset-x-4 z-50 flex items-center justify-between lg:hidden">
-        {/* Burger - GAUCHE */}
+      <div className="fixed inset-x-4 top-3 z-50 flex items-center justify-between lg:hidden">
         <motion.button
           type="button"
           aria-label="Ouvrir le menu"
           onClick={() => setOpen(true)}
           whileTap={{ scale: 0.92 }}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white/80 shadow-sm backdrop-blur-md"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white/80 shadow-sm backdrop-blur-md dark:bg-card/80"
         >
           <span className="text-lg leading-none">☰</span>
         </motion.button>
       </div>
 
-      {/* Drawer */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -62,54 +57,50 @@ export function MobileHeader() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            {/* Overlay */}
             <motion.button
               aria-label="Fermer le menu"
               className="absolute inset-0 bg-black/40"
               onClick={() => setOpen(false)}
             />
 
-            {/* Panel - depuis GAUCHE maintenant */}
             <motion.aside
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", stiffness: 420, damping: 36 }}
-              className="absolute left-0 top-0 h-full w-72 bg-white p-4 shadow-xl"
+              className="absolute left-0 top-0 h-full w-72 bg-white p-4 shadow-xl dark:bg-card"
             >
               <div className="mb-4 flex items-center justify-between">
                 <span className="text-sm font-semibold">Navigation</span>
-                <motion.button
-                  onClick={() => setOpen(false)}
-                  whileTap={{ scale: 0.92 }}
-                  className="rounded-full px-3 py-2 text-sm hover:bg-muted"
-                >
-                  ✕
-                </motion.button>
+                <div className="flex items-center gap-2">
+                  <LanguageToggle />
+                  <ThemeToggle />
+                  <motion.button
+                    onClick={() => setOpen(false)}
+                    whileTap={{ scale: 0.92 }}
+                    className="rounded-full px-3 py-2 text-sm hover:bg-muted"
+                  >
+                    ✕
+                  </motion.button>
+                </div>
               </div>
 
               <nav className="space-y-2">
-                {links.map((l) => {
-                  const isActive = active === l.href;
-                  return (
-                    <Link
-                      key={l.href}
-                      href={l.href}
-                      onClick={() => {
-                        setActive(l.href);
-                        setOpen(false);
-                      }}
-                      className={[
-                        "block rounded-xl px-4 py-3 text-sm transition",
-                        isActive
-                          ? "bg-primary/15 font-semibold text-foreground"
-                          : "text-muted-foreground hover:bg-primary/10 hover:text-foreground",
-                      ].join(" ")}
-                    >
-                      {l.label}
-                    </Link>
-                  );
-                })}
+                {links.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    onClick={() => { setActive(l.href); setOpen(false); }}
+                    className={[
+                      "block rounded-xl px-4 py-3 text-sm transition",
+                      active === l.href
+                        ? "bg-primary/15 font-semibold text-foreground"
+                        : "text-muted-foreground hover:bg-primary/10 hover:text-foreground",
+                    ].join(" ")}
+                  >
+                    {l.label}
+                  </Link>
+                ))}
               </nav>
             </motion.aside>
           </motion.div>

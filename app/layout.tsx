@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import { MobileHeader } from "./components/MobileHeader";
 import Footer from "./components/Footer";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mathieu-scicluna.fr"),
@@ -65,10 +66,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" suppressHydrationWarning>
       <body className="min-h-screen bg-background text-foreground">
-        <Header />
-        <MobileHeader />
-        {children}
-        <Footer />
+        <Providers>
+          <Header />
+          <MobileHeader />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
