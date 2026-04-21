@@ -198,7 +198,7 @@ export const translations = {
       ],
     },
     footer: {
-      description: "Développeur web freelance\nRemote · France\nDisponible en Île-de-France (présentiel)",
+      description: "Développeur web freelance\nManche · Calvados · Bretagne\nParis & remote (1j présentiel max)",
       navTitle: "Navigation",
       contactTitle: "Contact",
       copyright: "© 2026 Mathieu Scicluna — Fait avec Next.js & Tailwind CSS",
@@ -404,7 +404,7 @@ export const translations = {
       ],
     },
     footer: {
-      description: "Freelance web developer\nRemote · France\nAvailable in Paris (on-site)",
+      description: "Freelance web developer\nManche · Calvados · Brittany\nParis & remote (1 day on-site max)",
       navTitle: "Navigation",
       contactTitle: "Contact",
       copyright: "© 2026 Mathieu Scicluna — Built with Next.js & Tailwind CSS",
