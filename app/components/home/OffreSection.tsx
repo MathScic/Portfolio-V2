@@ -102,11 +102,7 @@ export default function OffreSection() {
 
             <Link
               href="#contact"
-              className={`mt-5 inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
-                offre.highlight
-                  ? "border border-primary bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground hover:scale-[1.02] hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)]"
-                  : "border border-primary/30 bg-white/60 text-primary hover:border-primary hover:bg-primary hover:text-primary-foreground hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] dark:bg-white/[0.05]"
-              }`}
+              className="mt-5 inline-flex w-full items-center justify-center rounded-full border border-primary bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary transition-all duration-300 hover:scale-[1.02] hover:bg-primary hover:text-primary-foreground hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)]"
             >
               {o.cta}
             </Link>
