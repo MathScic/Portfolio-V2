@@ -8,11 +8,11 @@ import AboutCTA from "../components/about/AboutCTA";
 export const metadata: Metadata = {
   title: "À propos",
   description:
-    "Mathieu Scicluna, développeur Fullstack Next.js basé en Normandie. Disponible en freelance pour vos projets web.",
+    "Mathieu Scicluna, développeur Fullstack Next.js freelance. Disponible en remote partout en France, présentiel Paris.",
   openGraph: {
     title: "À propos | Mathieu Scicluna",
     description:
-      "Développeur Fullstack Next.js en Normandie, disponible en freelance. Découvrez mon parcours et mes compétences.",
+      "Développeur Fullstack Next.js freelance, remote France. Découvrez mon parcours et mes compétences.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };

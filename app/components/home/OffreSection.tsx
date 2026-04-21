@@ -104,7 +104,7 @@ export default function OffreSection() {
               href="#contact"
               className={`mt-5 inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
                 offre.highlight
-                  ? "bg-primary text-primary-foreground hover:scale-[1.02] hover:bg-primary/80 hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)]"
+                  ? "border border-primary bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground hover:scale-[1.02] hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)]"
                   : "border border-primary/30 bg-white/60 text-primary hover:border-primary hover:bg-primary hover:text-primary-foreground hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] dark:bg-white/[0.05]"
               }`}
             >

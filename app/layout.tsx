@@ -8,18 +8,18 @@ import { Providers } from "./providers";
 export const metadata: Metadata = {
   metadataBase: new URL("https://mathieu-scicluna.fr"),
   title: {
-    default: "Mathieu Scicluna | Développeur Fullstack Next.js – Normandie",
+    default: "Mathieu Scicluna | Développeur Fullstack Next.js – Remote France",
     template: "%s | Mathieu Scicluna",
   },
   description:
-    "Développeur Web Full-Stack basé en Normandie. Création de sites performants avec Next.js, React et Tailwind CSS. Spécialisé en SEO et UX.",
+    "Développeur Fullstack Next.js disponible en remote partout en France. Création de sites performants, SEO et interfaces soignées.",
   keywords: [
     "développeur web",
     "développeur full-stack",
     "Next.js",
     "React",
     "Tailwind CSS",
-    "Normandie",
+    "remote",
     "freelance",
     "création site web",
     "SEO",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://mathieu-scicluna.fr",
     siteName: "Mathieu Scicluna - Portfolio",
-    title: "Mathieu Scicluna | Développeur Fullstack Next.js – Normandie",
+    title: "Mathieu Scicluna | Développeur Fullstack Next.js – Remote France",
     description:
-      "Développeur Fullstack Next.js en Normandie, disponible en freelance. Sites performants, SEO et interfaces soignées.",
+      "Développeur Fullstack Next.js freelance, disponible remote partout en France. Sites performants, SEO et interfaces soignées.",
     images: [
       {
         url: "/og-image.jpg",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Mathieu Scicluna | Développeur Web Full-Stack",
-    description: "Création de sites web performants en Normandie",
+    description: "Développeur Fullstack Next.js – Remote France",
     images: ["/og-image.jpg"],
   },
   robots: {

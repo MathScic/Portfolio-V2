@@ -10,12 +10,12 @@ export const translations = {
       contactBtn: "Me contacter",
     },
     hero: {
-      label: "Développeur Web Freelance – Normandie",
-      titlePart1: "Je crée des sites pros pour les",
-      titleAccent: "artisans et commerces",
-      titlePart2: "de Normandie",
+      label: "Développeur Web Freelance – Remote · France",
+      titlePart1: "Des sites web",
+      titleAccent: "performants et livrés vite",
+      titlePart2: "pour votre activité",
       subtitle:
-        "Site vitrine clé en main, livré en 2 à 3 semaines.\nVisible sur Google, adapté mobile, sans prise de tête.",
+        "De la landing page à l'application sur mesure, je transforme votre projet en produit web soigné.\nDisponible en remote partout en France.",
       cta1: "Voir mes réalisations",
       cta2: "Me contacter",
       cta3: "Télécharger mon CV",
@@ -41,9 +41,9 @@ export const translations = {
             "Construit avec les technologies actuelles. Facile à faire évoluer si vos besoins changent.",
         },
         {
-          title: "Accompagnement local",
+          title: "Disponible partout en France",
           description:
-            "Basé dans la Manche. Disponible pour un RDV sur place dans un rayon de 50 km autour de Granville.",
+            "100 % remote ou présentiel selon vos préférences. Disponible pour des missions en Île-de-France et partout en France.",
         },
       ],
     },
@@ -162,7 +162,7 @@ export const translations = {
       title: "Développeur passionné par les",
       titleAccent: "détails",
       text1:
-        "Basé en Normandie, je transforme des idées en produits web performants et élégants. Mon approche combine rigueur technique, sens du design et orientation produit.",
+        "Je transforme des idées en produits web performants et élégants. Mon approche combine rigueur technique, sens du design et orientation produit.",
       text2:
         "Spécialisé dans l'écosystème React/Next.js, j'accorde une attention particulière à la performance, l'accessibilité et la maintenabilité du code.",
       techLabel: "Technologies",
@@ -198,7 +198,7 @@ export const translations = {
       ],
     },
     footer: {
-      description: "Développeur web freelance\nGranville, Manche (50) — Normandie\nDisponible dans un rayon de 50 km",
+      description: "Développeur web freelance\nRemote · France\nDisponible en Île-de-France (présentiel)",
       navTitle: "Navigation",
       contactTitle: "Contact",
       copyright: "© 2026 Mathieu Scicluna — Fait avec Next.js & Tailwind CSS",
@@ -216,12 +216,12 @@ export const translations = {
       contactBtn: "Contact me",
     },
     hero: {
-      label: "Freelance Web Developer – Normandy",
-      titlePart1: "I create professional websites for",
-      titleAccent: "craftsmen and businesses",
-      titlePart2: "in Normandy",
+      label: "Freelance Web Developer – Remote · France",
+      titlePart1: "High-performance websites",
+      titleAccent: "delivered fast",
+      titlePart2: "for your business",
       subtitle:
-        "Turnkey website, delivered in 2 to 3 weeks.\nVisible on Google, mobile-friendly, hassle-free.",
+        "From landing pages to custom applications, I turn your project into a polished web product.\nAvailable remotely across France.",
       cta1: "See my work",
       cta2: "Contact me",
       cta3: "Download my CV",
@@ -247,9 +247,9 @@ export const translations = {
             "Built with current technologies. Easy to evolve as your needs change.",
         },
         {
-          title: "Local support",
+          title: "Available across France",
           description:
-            "Based in Normandy. Available for an on-site meeting within 50 km of Granville.",
+            "100% remote or on-site depending on your preferences. Available for missions in Paris and across France.",
         },
       ],
     },
@@ -368,7 +368,7 @@ export const translations = {
       title: "Developer passionate about the",
       titleAccent: "details",
       text1:
-        "Based in Normandy, I turn ideas into high-performance, elegant web products. My approach combines technical rigour, design sense and product focus.",
+        "I turn ideas into high-performance, elegant web products. My approach combines technical rigour, design sense and product focus.",
       text2:
         "Specialising in the React/Next.js ecosystem, I pay particular attention to performance, accessibility and code maintainability.",
       techLabel: "Technologies",
@@ -404,7 +404,7 @@ export const translations = {
       ],
     },
     footer: {
-      description: "Freelance web developer\nGranville, Manche (50) — Normandy\nAvailable within 50 km",
+      description: "Freelance web developer\nRemote · France\nAvailable in Paris (on-site)",
       navTitle: "Navigation",
       contactTitle: "Contact",
       copyright: "© 2026 Mathieu Scicluna — Built with Next.js & Tailwind CSS",

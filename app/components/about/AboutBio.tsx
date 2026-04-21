@@ -29,20 +29,21 @@ export default function AboutBio() {
       {/* Bio Text */}
       <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
         <p>
-          Je m&apos;appelle <strong className="text-foreground">Mathieu</strong>, développeur web basé à{" "}
-          <strong className="text-foreground">Granville, dans la Manche</strong>.
+          Je m&apos;appelle <strong className="text-foreground">Mathieu</strong>, développeur web
+          freelance disponible en <strong className="text-foreground">remote partout en France</strong>{" "}
+          et en présentiel sur Paris.
         </p>
         <p>
           Après 8 ans dans le commerce, j&apos;ai choisi de me consacrer à ce que j&apos;aime vraiment :
-          créer des sites qui servent à quelque chose.
+          créer des produits web qui servent à quelque chose.
         </p>
         <p>
-          J&apos;accompagne les <strong className="text-foreground">artisans, commerçants et producteurs locaux</strong>{" "}
-          qui veulent être trouvés sur Google et donner une image pro de leur activité — sans se
+          J&apos;accompagne aussi bien les <strong className="text-foreground">startups et entreprises</strong>{" "}
+          que les indépendants et commerçants qui veulent une présence en ligne sérieuse — sans se
           prendre la tête avec la technique.
         </p>
         <p>
-          Déjà présent sur le terrain avec{" "}
+          Parmi mes réalisations :{" "}
           <a
             href="https://www.trail-des-vikings.fr"
             target="_blank"
@@ -50,8 +51,8 @@ export default function AboutBio() {
             className="font-medium text-primary underline-offset-2 hover:underline"
           >
             trail-des-vikings.fr
-          </a>{" "}
-          et{" "}
+          </a>
+          ,{" "}
           <a
             href="https://www.forevercars.fr"
             target="_blank"
@@ -59,8 +60,17 @@ export default function AboutBio() {
             className="font-medium text-primary underline-offset-2 hover:underline"
           >
             forevercars.fr
+          </a>{" "}
+          et{" "}
+          <a
+            href="https://inkspire-drab.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-primary underline-offset-2 hover:underline"
+          >
+            inkspire
           </a>
-          , je connais les besoins des entreprises normandes.
+          .
         </p>
       </div>
     </motion.div>
