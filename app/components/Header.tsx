@@ -47,7 +47,7 @@ export default function Header() {
     <header className="sticky top-2 z-50 flex items-center justify-between px-4 sm:px-6">
       {/* Logo */}
       <Link href="/" className="flex items-center shrink-0">
-        <Image src="/logo.svg" alt="Mathieu Scicluna" width={40} height={40} priority />
+        <Image src="/images/logo.svg" alt="Mathieu Scicluna" width={40} height={40} priority />
       </Link>
 
       {/* Nav Desktop */}
