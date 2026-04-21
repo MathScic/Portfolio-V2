@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import ThemeToggle from "./ui/ThemeToggle";
@@ -47,7 +46,8 @@ export default function Header() {
     <header className="sticky top-2 z-50 flex items-center justify-between px-4 sm:px-6">
       {/* Logo */}
       <Link href="/" className="flex items-center shrink-0">
-        <Image src="/images/logo.svg" alt="Mathieu Scicluna" width={40} height={40} priority />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/images/logo.svg" alt="Mathieu Scicluna" width={40} height={40} />
       </Link>
 
       {/* Nav Desktop */}
