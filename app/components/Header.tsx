@@ -47,7 +47,7 @@ export default function Header() {
       {/* Logo */}
       <Link href="/" className="flex items-center shrink-0">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/logo.svg" alt="Mathieu Scicluna" width={64} height={64} />
+        <img src="/images/logo.svg" alt="Mathieu Scicluna" width={90} height={90} />
       </Link>
 
       {/* Nav Desktop */}
