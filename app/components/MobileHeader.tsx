@@ -35,7 +35,7 @@ export function MobileHeader() {
 
   return (
     <>
-      <div className="fixed right-4 top-8 z-50 lg:hidden">
+      <div className="fixed inset-x-4 top-3 z-50 flex items-center justify-between lg:hidden">
         <motion.button
           type="button"
           aria-label="Ouvrir le menu"
