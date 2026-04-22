@@ -52,23 +52,22 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-2 z-50 flex items-center justify-between px-4 sm:px-6">
-        {/* Logo + Burger mobile côte à côte */}
-        <div className="flex items-center gap-3">
-          <Link href="/" className="shrink-0">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/logo.svg" alt="Mathieu Scicluna" width={90} height={90} />
-          </Link>
+        {/* Logo */}
+        <Link href="/" className="shrink-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/logo.svg" alt="Mathieu Scicluna" width={90} height={90} />
+        </Link>
 
-          <motion.button
-            type="button"
-            aria-label="Ouvrir le menu"
-            onClick={() => setMobileOpen(true)}
-            whileTap={{ scale: 0.92 }}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white/80 shadow-sm backdrop-blur-md dark:bg-card/80 md:hidden"
-          >
-            <span className="text-lg leading-none">☰</span>
-          </motion.button>
-        </div>
+        {/* Burger mobile — centré */}
+        <motion.button
+          type="button"
+          aria-label="Ouvrir le menu"
+          onClick={() => setMobileOpen(true)}
+          whileTap={{ scale: 0.92 }}
+          className="absolute left-1/2 -translate-x-1/2 flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white/80 shadow-sm backdrop-blur-md dark:bg-card/80 md:hidden"
+        >
+          <span className="text-lg leading-none">☰</span>
+        </motion.button>
 
         {/* Nav Desktop */}
         <nav className="absolute left-1/2 hidden -translate-x-1/2 w-fit rounded-full border border-border bg-white/70 px-2 py-2 shadow-sm backdrop-blur-md dark:bg-card/80 md:block">
