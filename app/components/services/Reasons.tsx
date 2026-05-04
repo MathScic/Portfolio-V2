@@ -28,7 +28,7 @@ export default function Reasons() {
       </motion.div>
 
       {/* Cards Zigzag */}
-      <div className="space-y-8">
+      <div className="space-y-8 overflow-x-clip">
         {reasonsData.map((reason) => {
           const Icon = iconMap[reason.icon as keyof typeof iconMap];
           return (

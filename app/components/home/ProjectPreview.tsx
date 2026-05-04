@@ -27,8 +27,8 @@ export default function ProjectsPreview() {
     <section className="mx-auto max-w-7xl pb-24" id="projects">
       {/* Header - avec padding */}
       <motion.div
-        initial={{ opacity: 0, x: 40 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.35 }}
         transition={TRANSITION}
         className="px-6"
