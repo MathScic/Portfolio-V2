@@ -58,13 +58,13 @@ export default function Header() {
           <img src="/images/logo.svg" alt="Mathieu Scicluna" width={90} height={90} />
         </Link>
 
-        {/* Burger mobile — centré */}
+        {/* Burger mobile — droite */}
         <motion.button
           type="button"
           aria-label="Ouvrir le menu"
           onClick={() => setMobileOpen(true)}
           whileTap={{ scale: 0.92 }}
-          className="absolute left-1/2 -translate-x-1/2 flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white/80 shadow-sm backdrop-blur-md dark:bg-card/80 md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white/80 shadow-sm backdrop-blur-md dark:bg-card/80 md:hidden"
         >
           <span className="text-lg leading-none">☰</span>
         </motion.button>
