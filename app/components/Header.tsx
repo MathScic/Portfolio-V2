@@ -125,11 +125,11 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
             />
             <motion.aside
-              initial={{ x: "-100%" }}
+              initial={{ x: "100%" }}
               animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
+              exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 420, damping: 36 }}
-              className="absolute left-0 top-0 h-full w-72 bg-white p-4 shadow-xl dark:bg-card"
+              className="absolute right-0 top-0 h-full w-72 bg-white p-4 shadow-xl dark:bg-card"
             >
               <div className="mb-4 flex items-center justify-between">
                 <span className="text-sm font-semibold">Navigation</span>
